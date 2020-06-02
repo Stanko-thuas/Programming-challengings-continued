@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	font-family: 'Orbitron', sans-serif;
+	background-size: cover;
+	color:white;
+}
+
+.badge{   
+    position: relative;           /* Earth clock title */
+	text-align: center;
+	margin-top:50px;
+	margin-bottom: 50px;
+	margin-right:270px;
+	padding-bottom: 40px;
+	font-size:38px;
+	letter-spacing: 5px;
+	line-height: 10vh;
+	text-transform: uppercase;
+	animation: pulse 7s linear infinite;
+	text-shadow: -4px 3px 0 #000, -4px 7px 0 rgba(0,255,255,0.2);
+	transform: translate(50%,50%);
+	
+
+
+}
+.badge span{
+	opacity: 0;
+	transform: translate(-500px,0)scale(1);
+	animation: animate 4s forwards;
+	display: inline-block;
+}
+.badge span:nth-of-type(2){
+	animation-delay:.1s;
+
+}
+.badge span:nth-of-type(3){
+	animation-delay:.2s;
+
+}
+.badge span:nth-of-type(4){
+	animation-delay:.3s;
+
+}
+.badge span:nth-of-type(5){
+	animation-delay:.3s;
+
+}
+.badge span:nth-of-type(6){
+	animation-delay:.4s;
+
+}
+.badge span:nth-of-type(7){
+	animation-delay:.4s;
+
+}
+.badge span:nth-of-type(8){
+	animation-delay:.5s;
+
+}
+.badge span:nth-of-type(9){
+	animation-delay:.5s;
+
+}
+.badge span:nth-of-type(10){
+	animation-delay:.6s;
+}
+.badge span:nth-of-type(11){
+	animation-delay:.6s;
+}
+
+
+@keyframes animate{
+	40%{
+		transform: translate(20px,0) scale(0.7);
+	}
+	60%{
+		transform: translate(30px,0) scale(1);
+	}
+	80%{
+		transform: translate(35px,0) scale(1.1);
+	}
+	95%{
+		transform: translate(-35px,0) scale(1.1);
+	}
+	100%{
+		transform: translate(-55px,0) scale(1.1);
+		opacity: 1;
+	}
+
+
+}
+
+.clock1{ 
+	color: black;
+	position: relative; 
+	left:250px;        /* clock earth */
+	text-align: center;
+	display: block;
+	display: flex;
+	flex-direction: flex-wrap;
+	padding-left:100px;
+	height: 250px;
+	margin-right:270px;
+	font-size: 70px;
+	letter-spacing: 25px;
+	width: 600px;
+	animation: pulse 13s linear infinite;
+	text-shadow: -4px 3px 0 #000, -6px 7px 0 rgba(0,255,255,0.2);
+
+
+}
+.clock1 span{
+	opacity: 0;
+	transform: translate(-500px,0)scale(1);
+	animation: animate 4s forwards;
+	}
+
+
+@keyframes pulse{						/*colorful text*/
+	0%{ color: #08F7FE;
+
+	}
+	10%{ color:#09FBD3;
+		
+	}	
+	20%{ color:#FE53BB;
+		
+	}
+	30%{ color:#F5D300;
+		
+	}
+	40%{ color:#FF2281;
+		
+	}
+	50%{ color: #FF9472;
+		
+	}
+	60%{ color: #00C2BA;
+		
+	}
+	70%{ color: #037A90;
+		
+	}
+	80%{ color: #01FFC3;
+		
+	}
+	90%{ color: #440BD4;
+		
+	}
+	100%{ color: #535EEB;
+		
+	}
+}
+
+
+/* animations */
+
+
+.mainContainer{           /* clock with title*/
+	position: relative;
+	z-index: 10;
+	height: 70px;
+	padding:20px;
+	bottom:54vh;
+
+
+}
+
+.bnt1{
+	width:100%;
+	padding-left: 20px; 							/* button to mars */
+	display:inline-block;
+	text-decoration: none;
+	position: relative;
+	z-index: 10;
+	background-color:rgba(0,0,0,0.4);
+	font-size: 29px;
+	display: border-box;
+	border:solid rgba(0,0,128,0.2);
+	letter-spacing: 6px;
+
+}
+nav a {
+	text-decoration: none;
+	color: white;
+	animation: pulse 7s linear infinite;
+	text-shadow: -4px 3px 0 #000, -4px 7px 0 rgba(0,0,128,0.9)	; 
+	font-family: 'Monoton', cursive;
+	font-size: 23px;
+
+}
+
+a:hover {
+  background-color: rgba(0,255,255,0.2);
+}
+
+.bnt2{           									 /*button to earth */
+	width:100%;
+	padding-left: 20px; 							
+	display:inline-block;
+	text-decoration: none;
+	position: relative;
+	z-index: 10;
+	background-color:rgba(0,0,0,0.4);
+	font-size: 29px;
+	display: border-box;
+	border:solid rgba(255,155,4,0.1);
+	letter-spacing: 6px;
+}
+
+.main{               /* main block, section includes bGv+badge+clock  */
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+
+}
+
+.main video {        /* Earth Video */
+	position: absolute;
+	top:0;
+	left:0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.main::after{  /* darken bG */
+	content:"";
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.1;
+}
+
+
